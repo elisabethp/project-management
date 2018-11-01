@@ -1,0 +1,41 @@
+/ * PROJECT OBJECT */
+
+{
+    "title": null,
+    "creation_date": null,
+    "last_updated": null,
+    "last_accessed": null, 
+    "owner": null,
+    "description": null,
+    "requirements": [],
+    "members": null,
+    "risks": []
+}
+
+/* REQUIREMENT OBJECT */
+{
+    "id": null,
+    "priority": null,
+    "description": null,
+    "type": null,
+    "effort": {
+        "RQA": null,
+        "DES": null,
+        "COD": null,
+        "TES": null,
+        "PM": null
+    }
+}
+
+/* RISK OBJECT */
+
+{
+    "name": null,
+    "status": null,
+}
+
+/* MEMBER OBJECT */
+{
+    "name": null,
+    "role": null
+}
