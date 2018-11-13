@@ -43,7 +43,7 @@ addBtn.onclick = function () {
 }
 
 // Get the <span> element that closes the modal
-var addSpan = document.getElementsByClassName("close")[0];
+var addSpan = document.getElementsByClassName("close")[1];
 
 // When the user clicks on <span> (x), close the modal
 addSpan.onclick = function () {
@@ -66,7 +66,7 @@ removeBtn.onclick = function () {
 }
 
 // Get the <span> element that closes the modal
-var removeSpan = document.getElementsByClassName("close")[0];
+var removeSpan = document.getElementsByClassName("close")[2];
 
 // When the user clicks on <span> (x), close the modal
 removeSpan.onclick = function () {
@@ -75,31 +75,6 @@ removeSpan.onclick = function () {
 // --------------
 
 
-
-// --------------
-// Modal Example Code
-// Get the modal
-var modal = document.getElementById('myModal');
-
-// Get the button that opens the modal
-var btn = document.getElementById("myBtn");
-
-// When the user clicks the button, open the modal
-btn.onclick = function ()
-{
-    activeModal = modal;
-    activeModal.style.display = "block";
-}
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[2];
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function ()
-{
-    activeModal.style.display = "none";
-}
-// --------------
 
 // --------------
 // Modal Window Event Code

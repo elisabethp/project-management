@@ -63,6 +63,8 @@
     <!--Quick Actions Bar for 3 Main Features-->
     <p>Quick Actions: <button id="Import">Import from File</button> | <button id="Add">Add new requirment</button> | <button id="Remove">Remove existing requirement</button></p>
 
+    <br />
+
     <!--Import from File - Modal HTML Code-->
     <div id="ImportModal" class="modal">
         <!--Modal Content-->
@@ -89,13 +91,14 @@
     </div>
 
     <!--Import from File - Modal HTML Code-->
-    <div id="ImportModal" class="modal">
+    <div id="RemoveModal" class="modal">
         <!--Modal Content-->
         <div class="modal-content">
             <span class="close">&times;</span>
-            <p><h4>Import from File</h4></p>
-            <p>Enter the file directory path in the field below</p>
-            <p><input type="text" name="File Path:" value="path" /><button>Import File</button></p>
+            <p><h4>Remove existing requirement</h4></p>
+            <p>Select which requirement to remove</p>
+            <p><input type="text" name="Remove Requirement:" value="requirement" /></p>
+            <p><button>Remove</button></p>
         </div>
     </div>
 
@@ -103,27 +106,13 @@
     <p><h4>Functional Requirements</h4></p>
     <p>content</p>
 
+    <br />
+
     <!--NonFunctional Requirements Code-->
     <p><h4>Non-Functional Requirements</h4></p>
     <p>content</p>
 
 
-    <!--Modal Example Code : Re-engineering as necessary-->
-    <h2>Modal Example</h2>
-
-    <!-- Trigger/Open The Modal -->
-    <button id="myBtn">Open Modal</button>
-
-    <!-- The Modal -->
-    <div id="myModal" class="modal">
-
-        <!-- Modal content -->
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <p>Some text in the Modal..</p>
-        </div>
-
-    </div>
 
     <script src="ProjectRequirements.js"></script>
 
