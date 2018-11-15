@@ -9,7 +9,7 @@
     "requirements": 
 	[
 		{
-		"id": 1,
+		"reqid": 1,
 		"priority": 4,
 		"description": "this requirement helps test JSON capabilities in nesting objects.",
 		"type": "generic",
@@ -22,7 +22,7 @@
 		}
 		},
 		{
-		"id": 2,
+		"reqid": 2,
 		"priority": 2,
 		"description": "this requirement exists to ensure that multiple requirements can be handled by the application.",
 		"type": "generic",
