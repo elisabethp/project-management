@@ -41,13 +41,14 @@ body {
     height: 50%;
 }
 
+#bottom-body {
+    text-align: center;
+}
+
 #bar-effort {}
 
 #pi-effort {}
 
-#req-title {
-    margin-left: 2%;
-}
 
 .nav-item {
     display: flex;
@@ -76,3 +77,20 @@ body {
     text-align: center;
     width: 100%;
 }
+
+table {
+    width: 94%;
+    margin: 0 3%;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+th {
+    text-align: left;
+}
+
+td {
+    height: 50px;
+    border-bottom: 1px grey solid;
+}
+
