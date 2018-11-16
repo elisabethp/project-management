@@ -14,7 +14,7 @@
 		"reqid": 1,
 		"priority": 4,
 		"description": "this requirement helps test JSON capabilities in nesting objects.",
-		"type": "generic",
+		"type": "functional",
 		"effort": {
 			"RQA": 8,
 			"DES": 4,
@@ -27,7 +27,7 @@
 		"reqid": 2,
 		"priority": 2,
 		"description": "this requirement exists to ensure that multiple requirements can be handled by the application.",
-		"type": "generic",
+		"type": "nonfunctional",
 		"effort": {
 			"RQA": 8,
 			"DES": 4,
