@@ -65,8 +65,10 @@ currentProject =
     }
 
 console.log(currentProject);
+//saved variables hold the table information from passed function
 var savedMem, savedRole, savedRisk, savedStatus;
 
+//populates the member table
 function popTable(){
 	var x = "";
 	for(i in currentProject.members){
@@ -79,6 +81,8 @@ function popTable(){
 	}
 	document.getElementById("bod").innerHTML = x;
 }
+
+//populates the risk table
 function popRTable(){
 	var x = "";
 	for(i in currentProject.risks){
@@ -91,18 +95,26 @@ function popRTable(){
 	}
 	document.getElementById("rBod").innerHTML = x;
 }
+
+//populates the project description
 function popDesc(){
 	var x = "Project Description: " + currentProject.description;
 	document.getElementById("projDesc").innerHTML = x;
 }
+
+//populates the Project Name
 function popTitle(){
 	var x = "Project Name: " + currentProject.title;
 	document.getElementById("projTitle").innerHTML = x;
 }
+
+//populates the Project Manager field
 function popOwner(){
 	var x = "Project Manager: " + currentProject.owner;
 	document.getElementById("projOwner").innerHTML = x;
 }
+
+//causes every population function to execute upon the page being loaded
 function popData(){
 	popTable();
 	popRTable();
@@ -110,10 +122,14 @@ function popData(){
 	popTitle();
 	popOwner();
 }
+
+//displays add member form
 function AddUser() {
 	document.getElementById("AddUser").style.display = "block";
 	
 }
+
+//creates a new team member
 function newUser() {
 	var mem = document.getElementById("newMember").value;
 	var role = document.getElementById("newRole").value;
@@ -132,14 +148,19 @@ function newUser() {
 	document.getElementById("newRole").value = "";
 }
 
+//closes the new member form
 function Close() {
 	document.getElementById("AddUser").style.display = "none";
 	document.getElementById("newMember").value = "";
 	document.getElementById("newRole").value = "";
 }
+
+//displays new risk form
 function AddRisk() {
 	document.getElementById("AddRisk").style.display = "block";
 }
+
+//creates new risk
 function newRisks() {
 	var risk = document.getElementById("newRisk").value;
 	var select = document.getElementById("newStatus");
@@ -158,14 +179,18 @@ function newRisks() {
 	document.getElementById("newRisk").value = "";
 }
 
+//closes new risk form
 function CloseRisk() {
 	document.getElementById("AddRisk").style.display = "none";
 	document.getElementById("newRisk").value = "";
 }
 
+//displays edit user form
 function EditUser() {
 	document.getElementById("EditUser").style.display = "block";
 }
+
+//passes the member's name and role to the savedMem and savedRole variables
 function passName(e){
 	var role;
 	for(i in currentProject.members){
@@ -186,6 +211,8 @@ function passName(e){
 	document.getElementById("EditRole").value = role;
 	
 }
+
+//saves changes made to the member
 function saveUser(){
 	var mem = document.getElementById("EditName").value;
 	var role = document.getElementById("EditRole").value;
@@ -204,6 +231,8 @@ function saveUser(){
 	
 	
 }
+
+//removes the member from the table
 function removeUser(){
 	for(i in currentProject.members){
 		if(currentProject.members[i].name == savedMem){
@@ -218,9 +247,13 @@ function removeUser(){
 	document.getElementById("EditUser").style.display = "none";
 	popTable();
 }
+
+//displays edit risk form
 function EditRisk() {
 	document.getElementById("EditRisk").style.display = "block";
 }
+
+//passes risk name and status to savedRisk and savedStatus variables
 function passRisk(e){
 	var status;
 	for(i in currentProject.risks){
@@ -236,6 +269,8 @@ function passRisk(e){
 	document.getElementById("EditRiskName").placeholder = "Edit " + e + "'s first and last name";
 	document.getElementById(status).selected = true;
 }
+
+//saves changes to a risk
 function saveRisk(){
 	var risk = document.getElementById("EditRiskName").value;
 	var select = document.getElementById("EditStatus");
@@ -253,6 +288,8 @@ function saveRisk(){
 	document.getElementById("EditRisk").style.display = "none";
 	popRTable();
 }
+
+//removes risk from table
 function removeRisk(){
 	for(i in currentProject.risks){
 		if(currentProject.risks[i].name == savedRisk){
@@ -268,30 +305,37 @@ function removeRisk(){
 	popRTable();
 }
 
+//closes edit member form
 function CloseEUser() {
 	document.getElementById("EditUser").style.display = "none";
 	document.getElementById("EditName").value = "";
 	document.getElementById("EditRole").value = "";
 }
+
+//closes edit risk form
 function CloseERisk() {
 	document.getElementById("EditRisk").style.display = "none";
 	document.getElementById("EditRiskName").value = "";
 }
+
+//closes modal box upon clicking outside it
 window.onclick = function(event) {
 	if (event.target == document.getElementById("AddUser")) {
 		document.getElementById("AddUser").style.display = "none";
-		document.getElementById("AddUser").reset();
+		document.getElementById("newMember").value = "";
+		document.getElementById("newRole").value = "";
 	}
 	else if (event.target == document.getElementById("AddRisk")) {
 		document.getElementById("AddRisk").style.display = "none";
-		document.getElementById("AddRisk").reset();
+		document.getElementById("newRisk").value = "";
 	}
 	else if (event.target == document.getElementById("EditUser")) {
 		document.getElementById("EditUser").style.display = "none";
-		document.getElementById("EditUser").reset();
+		document.getElementById("EditName").value = "";
+		document.getElementById("EditRole").value = "";
 	}
 	else if (event.target == document.getElementById("EditRisk")) {
 		document.getElementById("EditRisk").style.display = "none";
-		document.getElementById("EditRisk").reset();
+		document.getElementById("EditRiskName").value = "";
 	}
 }
