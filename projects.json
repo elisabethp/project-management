@@ -38,25 +38,25 @@
     "members": [
 	{
 		"name": "Menej M. Badlie",
-		"role": "Manager"
+		"role": ["Manager"]
 	},
 	{
 		"name": "Cody S. Brokin",
-		"role": "Tester"
+		"role": ["Tester"]
 	},
 	{
 		"name": "Screw R. Steakolders",
-		"role": "Requirements Analyst"
+		"role": ["Requirements Analyst"]
 	}
 	],
     "risks": [
 	{
 		"name": "failure to meet deadline",
-		"status": "active"
+		"status": ["Unresolved"]
 	},
 	{
 		"name": "Y2K",
-		"status": "Resolved 18 years ago."
+		"status": ["Resolved"]
 	}
 	]
 }
