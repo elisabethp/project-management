@@ -50,6 +50,18 @@
                 text-decoration: none;
                 cursor: pointer;
             }
+
+
+        table, td, th {
+            font-family: "Century Gothic";
+            border: 1px solid black;
+            text-align: center;
+            padding: 8px;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
     </style>
 
     <!--Title Code for Top of Page-->
@@ -72,7 +84,7 @@
             <span class="close">&times;</span>
             <p><h4>Import from File</h4></p>
             <p>Enter the file directory path in the field below</p>
-            <p><input type="text" name="File Path:" value="path" /><button>Import File</button></p>
+            <p><input type="text" name="File Path:" placeholder="Ex.: C:\users\fileName.fileExtension" style="width:400px" /><button>Import File</button></p>
         </div>
     </div>
 
@@ -83,9 +95,21 @@
             <span class="close">&times;</span>
             <p><h4>Add new requirement</h4></p>
             <p>Enter the following information to add a new requirement</p>
-            <p><input type="text" name="Requirement Name:" value="name" /></p>
-            <p><input type="text" name="Description:" value="description" /></p>
-            <p><input type="text" name="Functional or Non-Functional:" value="F or NF" /></p>
+            <p>Requirement's Description:</p>
+            <p><textarea id="description" name="AddRequirementsDescription" rows="5" cols="50" placeholder="Enter a description"></textarea></p>
+            <p>Priority Value:</p>
+            <p>
+                <input type="radio" name="priority" value="1" />1 <br />
+                <input type="radio" name="priority" value="2" />2 <br />
+                <input type="radio" name="priority" value="3" />3 <br />
+                <input type="radio" name="priority" value="4" />4 <br />
+                <input type="radio" name="priority" value="5" />5 <br />
+            </p>
+            <p>Requirement Type:</p>
+            <p>
+                <input type="radio" name="type" value="functional" />Functional <br />
+                <input type="radio" name="type" value="nonfunctional" />Non-Functional <br />
+            </p>
             <p><button>Add</button></p>
         </div>
     </div>
@@ -96,21 +120,60 @@
         <div class="modal-content">
             <span class="close">&times;</span>
             <p><h4>Remove existing requirement</h4></p>
-            <p>Select which requirement to remove</p>
-            <p><input type="text" name="Remove Requirement:" value="requirement" /></p>
+            <p>Enter the Requirement ID # of the requirement you want to remove.</p>
+            <p><input type="text" name="removedRequirement" placeholder="Ex.: ###" /></p>
+            <p>*Please note that once 'Remove' is pressed, the requirement is no longer saved!*</p>
             <p><button>Remove</button></p>
         </div>
     </div>
 
     <!--Functional Requirements Code-->
     <p><h4>Functional Requirements</h4></p>
-    <p>content</p>
+    <p>A table of all the Functional requirements in the currently opened project.</p>
+    <p>
+        <table style="width:100%">
+            <tr>
+                <th>ID #</th>
+                <th>Priority (Ex.: 1-5)</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>001</td>
+                <td>1</td>
+                <td>First Requirement</td>
+            </tr>
+            <tr>
+                <td>002</td>
+                <td>4</td>
+                <td>Second Requirement</td>
+            </tr>
+        </table>
+    </p>
 
     <br />
 
     <!--NonFunctional Requirements Code-->
     <p><h4>Non-Functional Requirements</h4></p>
-    <p>content</p>
+    <p>A table of all the Non-Functional requirements in the currently opened project.</p>
+    <p>
+        <table style="width:100%">
+            <tr>
+                <th>ID #</th>
+                <th>Priority (Ex.: 1-5)</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>003</td>
+                <td>2</td>
+                <td>Third Requirement</td>
+            </tr>
+            <tr>
+                <td>004</td>
+                <td>1</td>
+                <td>Fourth Requirement</td>
+            </tr>
+        </table>
+    </p>
 
 
 

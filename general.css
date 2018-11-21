@@ -1,0 +1,245 @@
+html, body {
+	height: 100%;
+	padding: 0;
+	margin: 0;
+}
+.split {
+  height: 50%;
+  width: 50%;
+  float: left;
+  outline-style: solid;
+  outline-color: #dddddd;
+}
+
+#left {
+  background-color: white;
+  height: 100%;
+  overflow-y: auto;
+  padding-left: 10px;
+}
+
+#righttop {
+  background-color: white;
+  overflow-y: auto;
+  padding-left: 10px;
+}
+
+#rightbottom {
+	background: white;
+	overflow-y: auto;
+	padding-left: 10px;
+}
+#addBtn{
+	background: none;
+	background-color: blue;
+	color: white;
+	padding: 16px 20px;
+	border: none;
+	cursor: pointer;
+	width: 20%;
+	margin-bottom:10px;
+	opacity: 0.8;
+}
+.EditRow {
+	cursor: pointer;
+}
+
+* {box-sizing: border-box;}
+.AddEdit-Form {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #474e5d;
+	padding-top: 50px;
+}
+
+.form-container {
+  padding: 10px;
+}
+
+.form-container input[type=text] {
+  width: 100%;
+  display: inline-block;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+.form-container select {
+  width: 15%;
+  display: inline-block;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+.form-container input[type=text]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+.form-container .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 10%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+.form-container .cancel {
+  background-color: red;
+}
+.form-container .remove {
+  background-color: blue;
+}
+
+.content {
+	background-color: #fefefe;
+	margin: 5% auto 15% auto;
+	border: 1px solid #888;
+	width: 80%;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+.table {
+  width: 100%;
+  margin-bottom: 1rem;
+  background-color: transparent;
+}
+
+.table th,
+.table td {
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6;
+}
+
+.table thead th {
+  vertical-align: bottom;
+  border-bottom: 2px solid #dee2e6;
+}
+
+.table tbody + tbody {
+  border-top: 2px solid #dee2e6;
+}
+
+.table .table {
+  background-color: #f8fafc;
+}
+
+.table-bordered {
+  border: 1px solid #dee2e6;
+}
+
+.table-bordered th,
+.table-bordered td {
+  border: 1px solid #dee2e6;
+}
+
+.table-bordered thead th,
+.table-bordered thead td {
+  border-bottom-width: 2px;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.table-hover tbody tr:hover {
+  background-color: rgba(0, 0, 0, 0.075);
+}
+
+.table-hover .table-primary:hover {
+  background-color: #b0d4f1;
+}
+
+.table-hover .table-primary:hover > td,
+.table-hover .table-primary:hover > th {
+  background-color: #b0d4f1;
+}
+
+.table-hover .table-secondary:hover {
+  background-color: #c8cbcf;
+}
+
+.table-hover .table-secondary:hover > td,
+.table-hover .table-secondary:hover > th {
+  background-color: #c8cbcf;
+}
+
+.table-hover .table-success:hover {
+  background-color: #b3e8ca;
+}
+
+.table-hover .table-success:hover > td,
+.table-hover .table-success:hover > th {
+  background-color: #b3e8ca;
+}
+
+.table-hover .table-info:hover {
+  background-color: #c0ddf6;
+}
+
+.table-hover .table-info:hover > td,
+.table-hover .table-info:hover > th {
+  background-color: #c0ddf6;
+}
+
+.table-hover .table-warning:hover {
+  background-color: #fff8b3;
+}
+
+.table-hover .table-warning:hover > td,
+.table-hover .table-warning:hover > th {
+  background-color: #fff8b3;
+}
+
+.table-hover .table-danger:hover {
+  background-color: #f4b0af;
+}
+
+.table-hover .table-danger:hover > td,
+.table-hover .table-danger:hover > th {
+  background-color: #f4b0af;
+}
+
+.table-hover .table-light:hover {
+  background-color: #ececf6;
+}
+
+.table-hover .table-light:hover > td,
+.table-hover .table-light:hover > th {
+  background-color: #ececf6;
+}
+
+.table-hover .table-dark:hover {
+  background-color: #b9bbbe;
+}
+
+.table-hover .table-dark:hover > td,
+.table-hover .table-dark:hover > th {
+  background-color: #b9bbbe;
+}
+
+
+.table-hover .table-active:hover {
+  background-color: rgba(0, 0, 0, 0.075);
+}
+
+.table-hover .table-active:hover > td,
+.table-hover .table-active:hover > th {
+  background-color: rgba(0, 0, 0, 0.075);
+}
+
+
+
