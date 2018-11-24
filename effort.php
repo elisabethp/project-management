@@ -3,13 +3,16 @@
 <head>
     <link rel="stylesheet" type="text/css" href="effort.css">
     <script src="effort-app.js"></script>
+    <script type="text/javascript" src="http://mbostock.github.com/d3/d3.js?2.1.3"></script>
+    <script type="text/javascript" src="http://mbostock.github.com/d3/d3.geom.js?2.1.3"></script>
+    <script type="text/javascript" src="http://mbostock.github.com/d3/d3.layout.js?2.1.3"></script>
 </head>
 
 <body>
     <h1 id="page-title">Effort Tracking and Monitoring</h1>
     <div id="page-wrapper">
         <div id="nav">
-            <div id="nav-title" class="nav-item" id="ALL">All Phases</div>
+            <div id="nav-title" class="nav-item">All Phases</div>
             <div class="nav-item" id="REQ">Requirements Elicitation</div>
             <div class="nav-item" id="DES">Designing</div>
             <div class="nav-item" id="COD">Coding</div>
