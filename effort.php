@@ -1,14 +1,8 @@
-<html>
+<?php 
+    include "header.php";
+?>
 
-<head>
-    <link rel="stylesheet" type="text/css" href="effort.css">
-    <script src="effort-app.js"></script>
-    <script type="text/javascript" src="http://mbostock.github.com/d3/d3.js?2.1.3"></script>
-    <script type="text/javascript" src="http://mbostock.github.com/d3/d3.geom.js?2.1.3"></script>
-    <script type="text/javascript" src="http://mbostock.github.com/d3/d3.layout.js?2.1.3"></script>
-</head>
 
-<body>
     <h1 id="page-title">Effort Tracking and Monitoring</h1>
     <div id="page-wrapper">
         <div id="nav">
@@ -22,10 +16,18 @@
         <div id="body">
             <div id="top-body">
                 <div class="chart" id="bar-effort">
-                    <div class="chart-title"><h2>Total Effort by Phase</h1></div>
+                    <div class="chart-title"><h2>Total Effort by Phase</h1>
+                    <div id="bar-chart">
+                        <svg></svg>
+                    </div>
+                </div>
                 </div>
                 <div class="chart" id="pi-effort">
-                    <div class="chart-title"><h2>Effort by Requirement</h1></div>
+                    <div class="chart-title"><h2>Effort by Requirement</h1>
+                        <div id="donut-chart">
+                            <svg></svg>
+                        </div>
+                    </div>
                 </div>
             </div> <!-- end top body -->
             <div id="bottom-body">
@@ -36,6 +38,6 @@
             </div> <!-- end bottom body -->
         </div> <!-- end body -->
     </div> <!-- end page wrapper -->    
-</body>
 
-</html>
+
+<?php include "footer.php"; ?>

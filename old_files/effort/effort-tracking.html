@@ -11,8 +11,11 @@ charset="utf-8"></script>
 <!-- Graph Stuff -->
 <body>
 <script>
-var data = [{"type":"RQA","hours":0},{"type":"DES","hours":0},{"type":"COD","hours":0},{"type":"TES","hours":0},{"type":"PM","hours":0}];
-<!-- PLACEHOLDER GLOBAL VARIABLE FOR JSON OBJECT "currproj" USED HERE -->
+var currproj = [{"type":"RQA","hours":0},{"type":"DES","hours":0},{"type":"COD","hours":0},{"type":"TES","hours":0},{"type":"PM","hours":0}];
+//<!-- PLACEHOLDER GLOBAL VARIABLE FOR JSON OBJECT "currproj" USED HERE -->
+
+
+
 for (var i=0;i<currproj.requirements.length;i++)
 {
 	data[0].hours+=currproj.requirements[i].effort.RQA;
@@ -21,13 +24,14 @@ for (var i=0;i<currproj.requirements.length;i++)
 	data[3].hours+=currproj.requirements[i].effort.TES;
 	data[4].hours+=currproj.requirements[i].effort.PM;
 }
-<!-- TEST DATA, COMMENT OUT LATER -->
-<!-- data=[{"type":"RQA","hours":1},{"type":"DES","hours":4},{"type":"COD","hours":3},{"type":"TES","hours":22},{"type":"PM","hours":15}]; -->
+//<!-- TEST DATA, COMMENT OUT LATER -->
+//<!-- data=[{"type":"RQA","hours":1},{"type":"DES","hours":4},{"type":"COD","hours":3},{"type":"TES","hours":22},{"type":"PM","hours":15}]; -->
+
 var margin = {top: 20, right: 20, bottom: 70, left: 40},
     width = 600 - margin.left - margin.right,
     height = 600 - margin.top - margin.bottom;
 	
-<!-- var svg = d3.select("svg"); -->
+//<!-- var svg = d3.select("svg"); -->
 
 var chart = d3.select(".chart")
 	.append('g')

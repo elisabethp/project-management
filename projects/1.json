@@ -1,0 +1,74 @@
+{
+    "id": 1,
+    "title": "test_title",
+    "creation_date": "test_date",
+    "last_updated": "test_last_update",
+    "last_accessed": "test_last_accessed", 
+    "owner": "ownerName",
+    "description": "This is a test project generated manually. Edit the projects.json file if formatting changes.",
+    "requirements": 
+	[
+		{
+		"reqid": 1,
+		"priority": 4,
+		"description": "this requirement helps test JSON capabilities in nesting objects.",
+		"type": "functional",
+		"effort": {
+			"RQA": 8,
+			"DES": 4,
+			"COD": 60,
+			"TES": 7,
+			"PM": 10
+		}
+		},
+		{
+		"reqid": 2,
+		"priority": 2,
+		"description": "this requirement exists to ensure that multiple requirements can be handled by the application.",
+		"type": "nonfunctional",
+		"effort": {
+			"RQA": 8,
+			"DES": 4,
+			"COD": 3,
+			"TES": 7,
+			"PM": 10
+		}},
+		{
+			"reqid": 3,
+			"priority": 2,
+			"description": "this requirement exists to ensure that multiple requirements can be handled by the application.",
+			"type": "nonfunctional",
+			"effort": {
+				"RQA": 8,
+				"DES": 4,
+				"COD": 3,
+				"TES": 90,
+				"PM": 50
+		}
+		}
+	],
+    "members": [
+	{
+		"name": "Menej M. Badlie",
+		"role": ["Manager"]
+	},
+	{
+		"name": "Cody S. Brokin",
+		"role": ["Tester"]
+	},
+	{
+		"name": "Screw R. Steakolders",
+		"role": ["Requirements Analyst"]
+	}
+	],
+    "risks": [
+	{
+		"name": "failure to meet deadline",
+		"status": ["Unresolved"]
+	},
+	{
+		"name": "Y2K",
+		"status": ["Resolved"]
+	}
+	]
+}
