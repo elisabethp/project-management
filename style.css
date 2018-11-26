@@ -400,3 +400,14 @@ td {
     font-size: 16pt;
     font-family: Arial;
    }   
+
+
+/* REQ PAGE */
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+#Import {
+  display: none;
+}

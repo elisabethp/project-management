@@ -10,6 +10,9 @@
         <script type="text/javascript" src="http://mbostock.github.com/d3/d3.geom.js?2.1.3"></script>
         <script type="text/javascript" src="http://mbostock.github.com/d3/d3.layout.js?2.1.3"></script> -->
         <script src="http://nvd3.org/assets/js/nv.d3.js"></script>
+
+        <meta charset="utf-8" />
+        <title>SWE 4663 - Group 5 - Project Management Web App</title>
     </head>
 
     <div id="top-nav">

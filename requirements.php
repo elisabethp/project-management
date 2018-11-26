@@ -1,16 +1,15 @@
-﻿<!DOCTYPE html>
+<?php 
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <meta charset="utf-8" />
-    <title>SWE 4663 - Project Management Web App</title>
-</head>
+    include "header.php";
+
+?>
+
+<!DOCTYPE html>
+
+<html>
 <body>
     <!--Style Initialization Code-->
     <style>
-        body {
-            font-family: 'Century Gothic';
-        }
 
         /* The Modal (background) */
         .modal {
@@ -53,7 +52,6 @@
 
 
         table, td, th {
-            font-family: "Century Gothic";
             border: 1px solid black;
             text-align: center;
             padding: 8px;
@@ -64,11 +62,8 @@
         }
     </style>
 
-    <!--Title Code for Top of Page-->
-    <h1>SWE 4663 - Project Management Web Application</h1>
-
     <!--Header Code for Page-->
-    <p><h2>Project Requirements</h2></p>
+    <p><h1>Project Requirements</h1></p>
 
     <br />
 
@@ -126,14 +121,14 @@
     <p><h4>Functional Requirements</h4></p>
     <p>A table of all the Functional requirements in the currently opened project.</p>
     <p>
-        <table id="functionalTable" style="width:100%">
+        <table id="functionalTable">
             <tr>
                 <th>ID #</th>
                 <th>Priority (Ex.: 1-5)</th>
                 <th>Description</th>
             </tr>
         </table>
-        <script>
+        <!--<script>
             //loadRequirements();
 
             var array = [
@@ -154,7 +149,7 @@
                     cell.innerHTML = array[i][j];
                 }
             }
-        </script>
+        </script>-->
     </p>
 
     <br />
@@ -163,7 +158,7 @@
     <p><h4>Non-Functional Requirements</h4></p>
     <p>A table of all the Non-Functional requirements in the currently opened project.</p>
     <p>
-        <table id="nonfunctionalTable" style="width:100%">
+        <table id="nonfunctionalTable">
             <tr>
                 <th>ID #</th>
                 <th>Priority (Ex.: 1-5)</th>
@@ -172,31 +167,9 @@
             
         </table>
 
-        <script>
-            //loadRequirements();
-
-            var array = [
-                ["002", "2", "second"],
-                ["004", "4", "fourth"],
-                ["006", "1", "sixth"],
-                ["009", "5", "ninth"],
-                ["010", "5", "tenth"]
-            ]
-            table = document.getElementById("nonfunctionalTable");
-
-            for (var i = 0; i < array.length; i++) {
-                var newRow = table.insertRow(i + 1);
-
-                for (var j = 0; j < array[i].length; j++) {
-                    var cell = newRow.insertCell(j);
-
-                    cell.innerHTML = array[i][j];
-                }
-            }
-        </script>
     </p>
 
-    <script src="ProjectRequirements.js"></script>
+    <!--<script src="ProjectRequirements.js"></script>-->
 
 </body>
 </html>
