@@ -169,7 +169,7 @@
 
     </p>
 
-    <!--<script src="ProjectRequirements.js"></script>-->
+<script src="req.js"></script>
 
 </body>
 </html>

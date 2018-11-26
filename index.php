@@ -10,7 +10,7 @@
 
 <div class="split" id = "righttop">
     <h1 id="projOwner">Project Manager: </h1>
-    <body class="loader" onload="popData()"></body>
+    <body class="loader"></body>
     <table id="UserTable" class = "table table-hover table-striped table-bordered">
         <thead>
             <th>Member Name</th>

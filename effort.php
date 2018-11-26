@@ -39,5 +39,5 @@
         </div> <!-- end body -->
     </div> <!-- end page wrapper -->    
 
-
+<script src="effort.js"></script>
 <?php include "footer.php"; ?>

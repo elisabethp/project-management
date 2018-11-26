@@ -1,64 +1,160 @@
 {
     "id": 1,
-    "title": "test_title",
-    "creation_date": "test_date",
-    "last_updated": "test_last_update",
-    "last_accessed": "test_last_accessed", 
-    "owner": "ownerName",
-    "description": "This is a test project generated manually. Edit the projects.json file if formatting changes.",
+    "title": "SWE 4663 – Software Project Management Group Project – Fall 2018",
+    "creation_date": "08/20/18",
+    "last_updated": "11/26/18",
+    "last_accessed": "11/26/18", 
+    "owner": "Elisabeth Petit - Bois",
+    "description": "Your software keeps track of other projects. \n For each project, it receives a list of functional and non-functional requirements (as input, in addition to owner's name, etc.) and allows the user to view the total expended hours by requirements analysis, designing, coding, testing, project management (by each of the requirement entered).",
     "requirements": 
 	[
 		{
 		"reqid": 1,
 		"priority": 4,
-		"description": "this requirement helps test JSON capabilities in nesting objects.",
+		"description": "Sample requirement #1",
 		"type": "functional",
 		"effort": {
-			"RQA": 8,
+			"RQA": 1,
 			"DES": 4,
 			"COD": 60,
 			"TES": 7,
 			"PM": 10
-		}
+			}
 		},
 		{
-		"reqid": 2,
-		"priority": 2,
-		"description": "this requirement exists to ensure that multiple requirements can be handled by the application.",
-		"type": "nonfunctional",
-		"effort": {
-			"RQA": 8,
-			"DES": 4,
-			"COD": 3,
-			"TES": 7,
-			"PM": 10
-		}},
+			"reqid": 2,
+			"priority": 4,
+			"description": "Sample requirement #2",
+			"type": "nonfunctional",
+			"effort": {
+				"RQA": 18,
+				"DES": 4,
+				"COD": 60,
+				"TES": 7,
+				"PM": 10
+			}
+		},
 		{
 			"reqid": 3,
-			"priority": 2,
-			"description": "this requirement exists to ensure that multiple requirements can be handled by the application.",
+			"priority": 4,
+			"description": "Sample requirement #3",
+			"type": "functional",
+			"effort": {
+				"RQA": 7,
+				"DES": 4,
+				"COD": 60,
+				"TES": 7,
+				"PM": 10
+			}
+		},
+		{
+			"reqid": 4,
+			"priority": 4,
+			"description": "Sample requirement #4",
 			"type": "nonfunctional",
+			"effort": {
+				"RQA": 6,
+				"DES": 7,
+				"COD": 26,
+				"TES": 9,
+				"PM": 10
+			}
+		},
+		{
+			"reqid": 5,
+			"priority": 4,
+			"description": "Sample requirement #5",
+			"type": "functional",
+			"effort": {
+				"RQA": 8,
+				"DES": 14,
+				"COD": 5,
+				"TES": 7,
+				"PM": 10
+			}
+		},	
+		{
+			"reqid": 6,
+			"priority": 4,
+			"description": "Sample requirement #6",
+			"type": "functional",
 			"effort": {
 				"RQA": 8,
 				"DES": 4,
+				"COD": 50,
+				"TES": 7,
+				"PM": 12
+			}
+		},
+		{
+			"reqid": 7,
+			"priority": 4,
+			"description": "Sample requirement #7",
+			"type": "functional",
+			"effort": {
+				"RQA": 9,
+				"DES": 1,
+				"COD": 16,
+				"TES": 3,
+				"PM": 10
+			}
+		},	
+		{
+		"reqid": 8,
+		"priority": 2,
+		"description": "Sample requirement #8",
+		"type": "functional",
+		"effort": {
+			"RQA": 28,
+			"DES": 9,
+			"COD": 1,
+			"TES": 7,
+			"PM": 1
+			}
+		},
+		{
+			"reqid": 9,
+			"priority": 2,
+			"description": "Sample requirement #9",
+			"type": "nonfunctional",
+			"effort": {
+				"RQA": 78,
+				"DES": 41,
 				"COD": 3,
-				"TES": 90,
-				"PM": 50
-		}
+				"TES": 0,
+				"PM": 5
+			}
+		},
+		{
+			"reqid": 10,
+			"priority": 3,
+			"description": "Sample requirement #10",
+			"type": "nonfunctional",
+			"effort": {
+				"RQA": 8,
+				"DES": 5,
+				"COD": 0,
+				"TES": 9,
+				"PM": 7
+			}
 		}
 	],
     "members": [
 	{
-		"name": "Menej M. Badlie",
+		"name": "Elisabeth Petit - Bois",
 		"role": ["Manager"]
 	},
 	{
-		"name": "Cody S. Brokin",
-		"role": ["Tester"]
+		"name": "JarekQ Alonsio",
+		"role": ["Developer"]
 	},
 	{
-		"name": "Screw R. Steakolders",
-		"role": ["Requirements Analyst"]
+		"name": "W.C. Gilbert",
+		"role": ["Developer"]
+	},
+	{
+		"name": "Garrett Noll",
+		"role": ["Developer"]
 	}
 	],
     "risks": [
