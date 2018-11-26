@@ -58,7 +58,7 @@
             text-align: center;
             padding: 8px;
         }
-        
+
         tr:nth-child(even) {
             background-color: #dddddd;
         }
@@ -99,18 +99,13 @@
             <p><textarea id="description" name="AddRequirementsDescription" rows="5" cols="50" placeholder="Enter a description"></textarea></p>
             <p>Priority Value:</p>
             <p>
-                <input type="radio" name="priority" value="1" />1 <br />
-                <input type="radio" name="priority" value="2" />2 <br />
-                <input type="radio" name="priority" value="3" />3 <br />
-                <input type="radio" name="priority" value="4" />4 <br />
-                <input type="radio" name="priority" value="5" />5 <br />
+                <input type="text" id="priority" placeholder="1 - 5" /><br />
             </p>
             <p>Requirement Type:</p>
             <p>
-                <input type="radio" name="type" value="functional" />Functional <br />
-                <input type="radio" name="type" value="nonfunctional" />Non-Functional <br />
+                <input type="text" id="type" placeholder="functional or nonfunctional" /><br />
             </p>
-            <p><button>Add</button></p>
+            <p><button onclick="addNewRequirementHTMLTable();">Add</button></p>
         </div>
     </div>
 
@@ -121,9 +116,9 @@
             <span class="close">&times;</span>
             <p><h4>Remove existing requirement</h4></p>
             <p>Enter the Requirement ID # of the requirement you want to remove.</p>
-            <p><input type="text" name="removedRequirement" placeholder="Ex.: ###" /></p>
+            <p><input type="text" id="removedRequirement" placeholder="Ex.: ###" /></p>
             <p>*Please note that once 'Remove' is pressed, the requirement is no longer saved!*</p>
-            <p><button>Remove</button></p>
+            <p><button onclick="removeRequirementHTMLTable();">Remove</button></p>
         </div>
     </div>
 
@@ -131,23 +126,35 @@
     <p><h4>Functional Requirements</h4></p>
     <p>A table of all the Functional requirements in the currently opened project.</p>
     <p>
-        <table style="width:100%">
+        <table id="functionalTable" style="width:100%">
             <tr>
                 <th>ID #</th>
                 <th>Priority (Ex.: 1-5)</th>
                 <th>Description</th>
             </tr>
-            <tr>
-                <td>001</td>
-                <td>1</td>
-                <td>First Requirement</td>
-            </tr>
-            <tr>
-                <td>002</td>
-                <td>4</td>
-                <td>Second Requirement</td>
-            </tr>
         </table>
+        <script>
+            //loadRequirements();
+
+            var array = [
+                ["001", "5", "first"],
+                ["003", "1", "third"],
+                ["005", "1", "fifth"],
+                ["007", "5", "James Bond"],
+                ["008", "3", "Alec from GoldenEye"]
+            ]
+            table = document.getElementById("functionalTable");
+
+            for (var i = 0; i < array.length; i++) {
+                var newRow = table.insertRow(i + 1);
+
+                for (var j = 0; j < array[i].length; j++) {
+                    var cell = newRow.insertCell(j);
+
+                    cell.innerHTML = array[i][j];
+                }
+            }
+        </script>
     </p>
 
     <br />
@@ -156,26 +163,38 @@
     <p><h4>Non-Functional Requirements</h4></p>
     <p>A table of all the Non-Functional requirements in the currently opened project.</p>
     <p>
-        <table style="width:100%">
+        <table id="nonfunctionalTable" style="width:100%">
             <tr>
                 <th>ID #</th>
                 <th>Priority (Ex.: 1-5)</th>
                 <th>Description</th>
             </tr>
-            <tr>
-                <td>003</td>
-                <td>2</td>
-                <td>Third Requirement</td>
-            </tr>
-            <tr>
-                <td>004</td>
-                <td>1</td>
-                <td>Fourth Requirement</td>
-            </tr>
+            
         </table>
+
+        <script>
+            //loadRequirements();
+
+            var array = [
+                ["002", "2", "second"],
+                ["004", "4", "fourth"],
+                ["006", "1", "sixth"],
+                ["009", "5", "ninth"],
+                ["010", "5", "tenth"]
+            ]
+            table = document.getElementById("nonfunctionalTable");
+
+            for (var i = 0; i < array.length; i++) {
+                var newRow = table.insertRow(i + 1);
+
+                for (var j = 0; j < array[i].length; j++) {
+                    var cell = newRow.insertCell(j);
+
+                    cell.innerHTML = array[i][j];
+                }
+            }
+        </script>
     </p>
-
-
 
     <script src="ProjectRequirements.js"></script>
 

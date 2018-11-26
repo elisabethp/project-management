@@ -1,28 +1,6 @@
 // JavaScript source code
 
-// Local Functions for Manipulating Data
-//var functionalRequirements = [];
-//var nonfunctionalRequirements = [];
-//var requirements = [];
-
-//requirements = currProject.requirements;
-
-//for (var i = 0; i < requirements.length; i++)
-//{
-//    if (requirements[i].type == "functional")
-//    {
-//        functionalRequirements.add(requirements[i]);
-//    }
-//    else if (requirements[i].type == "nonfunctional")
-//    {
-//        nonfunctionalRequirements.add(requirements[i]);
-//    }
-//    else
-//    {
-//        console.log("Requirement ID: " + requirements[i].reqid + " could not be added to either Functional or Non-Functional lists. Does not have matching type!");
-//    }
-//}
-
+// Current Project - Local Test Data Object
 var currentProject;
 
 currentProject =
@@ -90,6 +68,44 @@ currentProject =
     }
 
 console.log(currentProject);
+
+
+// Local Functions for Manipulating Data
+//var functionalRequirements = [];
+//var nonfunctionalRequirements = [];
+//var requirements = [];
+
+//requirements = currentProject.requirements;
+
+//for (var i = 0; i < requirements.length; i++)
+//{
+//    if (requirements[i].type == "functional")
+//    {
+//        functionalRequirements.add(requirements[i]);
+//    }
+//    else if (requirements[i].type == "nonfunctional")
+//    {
+//        nonfunctionalRequirements.add(requirements[i]);
+//    }
+//    else
+//    {
+//        console.log("Requirement ID: " + requirements[i].reqid + " could not be added to either Functional or Non-Functional lists. Does not have matching type!");
+//    }
+//}
+
+//function loadRequirements ()
+//{
+//    functionalRequirements;
+//    table = document.getElementById("functionalTable");
+
+//    for (var i = 0; i < functionalRequirements.length; i++) {
+//        var newRow = table.insertRow(i + 1);
+//        for (var j = 0; j < functionalRequirements[i].length; j++) {
+//            var cell = newRow.insertCell(j);
+//            cell.innerHTML = functionalRequirements[i][j];
+//        }
+//    }
+//}
 
 // Modal variable that acts as a dynamic, active modal
 var activeModal;
@@ -178,3 +194,48 @@ window.onclick = function (event)
     }
 }
 // --------------
+
+// Add New Requirement Code
+function addNewRequirementHTMLTable() {
+    type = document.getElementById("type").value;
+    priority = document.getElementById("priority").value;
+    description = document.getElementById("description").value;
+
+    if (type == "functional")
+    {
+        var table = document.getElementById("functionalTable"),
+            newRow = table.insertRow(),
+            cell1 = newRow.insertCell(0),
+            cell2 = newRow.insertCell(1),
+            cell3 = newRow.insertCell(2);
+
+        cell1.innerHTML = "###";
+        cell2.innerHTML = priority;
+        cell3.innerHTML = description;
+    }
+    if (type == "nonfunctional")
+    {
+        var table = document.getElementById("nonfunctionalTable"),
+            newRow = table.insertRow(),
+            cell1 = newRow.insertCell(0),
+            cell2 = newRow.insertCell(1),
+            cell3 = newRow.insertCell(2);
+
+        cell1.innerHTML = "###";
+        cell2.innerHTML = priority;
+        cell3.innerHTML = description;
+    }
+}
+
+// Remove Requirement Code
+function removeRequirementHTMLTable() {
+    ID = document.getElementById("removedRequirement").value;
+
+    if (ID == 0) {
+        ID = 1;
+    }
+
+    var table = document.getElementById("functionalTable");
+
+    table.deleteRow(ID);
+}
